@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-page">
+        <div class="sub-page">
+            <div class="navigation-bar">
+                <div class="logo">
+                    <a href='photography.html'>SHOPIFY</a>
+                </div>
+                <nav>
+                    <ul id='MenuItems'>
+                        <li><a href='#'>Home</a></li>
+                        <li><a href='#'>Shop</a></li>
+                        <li><a href='#'>About</a></li>
+                        <li><a href='#'>Contact</a></li>
+                        <li><a href='#'>Account</a></li>
+                        <li><a href="cart.html" class="fa-solid fa-cart-shopping" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                              </svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <div class="form-box">
+                        <div class="form">
+                            <form class="login-form">
+                                <center><h1 class="main-heading">Login Form</h1></center>
+				                <input type="text"placeholder="user name"/>
+				                <input type="password"placeholder="password"/>
+				                <button>LOGIN</button>
+				                <p class="message">Not Registered? <a href="#">Register</a></p>
+				            </form>
+                            <form class="register-form">
+                                <center><h1 class="main-heading">Register Form</h1></center>
+				                <input type="text" placeholder="user name"/>
+				                <input type="text" placeholder="email-id"/>
+				                <input type="password" placeholder="password"/>
+				                <button>REGISTER</button>
+				                <p class="message">Already Registered?<a href="#">Login</a>
+				                </p>
+				            </form>
+			             </div>
+	                </div>
+                </div>
+                <div class="col-1">
+                    <p class='defination'><br><br><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+    </script>
+    <script>
+        $('.message a').click(function(){$('form').animate({height: "toggle",opacity: "toggle"},"slow");});
+    </script>
+</body>
+</html>
