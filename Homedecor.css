@@ -189,10 +189,10 @@ img{
     padding: 3.2rem 0;
 }
 .product-col-left{
-    background: linear-gradient(rgba(188, 28, 28, 0), rgba(0, 0, 0, 0.3)), url("C:\Users\J Kalpana Yadav\Desktop\Shopify\Pictures\tredition.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(220, 25, 38, 0), rgba(201, 16, 16, 0.3)), url("C:\Users\J Kalpana Yadav\Desktop\Shopify\Pictures\tredition.jpg") center/cover no-repeat;
 }
 .product-col-r-top{
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("C:\Users\J Kalpana Yadav\Desktop\Shopify\Pictures\tredition.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(177, 17, 17, 0), rgba(205, 12, 12, 0.3)), url("C:\Users\J Kalpana Yadav\Desktop\Shopify\Pictures\tredition.jpg") center/cover no-repeat;
 }
 .flex{
     display: flex;
