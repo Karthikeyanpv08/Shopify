@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title> Toys</title>
+        <link rel="icon" href="Toy1.jpg">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="toys.css">
         <!-- font awesome -->
@@ -31,7 +32,7 @@
 
         <div class = "products">
             <div class = "container">
-                <h1 class = "lg-title">Special Toys With Offers</h1>
+                <h1 class = "lg-title">Special Toys for  special children</h1>
                 <p class = "text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quos sit consectetur, ipsa voluptatem vitae necessitatibus dicta veniam, optio, possimus assumenda laudantium. Temporibus, quis cum.</p>
 
                 <div class = "product-items">
@@ -39,7 +40,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "Thttps://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=" alt = "product image">
+                                <img src = "https://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=" alt = "product image" width='200%' height="100%" >
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -63,8 +64,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Teddy toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
 
                         <div class = "off-info">
@@ -76,7 +77,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "https://assets.ajio.com/medias/sys_master/root/h88/h47/14233215565854/-1117Wx1400H-4912802430-multi-MODEL.jpg" alt = "product image">
+                                <img src = "https://assets.ajio.com/medias/sys_master/root/h88/h47/14233215565854/-1117Wx1400H-4912802430-multi-MODEL.jpg" alt = "product image" height="98%">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -100,8 +101,9 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Micky Mouse toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">
+                            Rs. 150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
                     </div>
                     <!-- end of single product -->
@@ -132,9 +134,9 @@
                                     <span><i class = "far fa-star"></i></span>
                                 </div>
                             </div>
-                            <a href = "#" class = "product-name">Girl Teddy toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <a href = "#" class = "product-name"> Teddy doll, new product</a>
+                            <p class = "product-price">Rs.150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
                     </div>
                     <!-- end of single product -->
@@ -166,8 +168,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Minion toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">Rs.133.00</p>
                         </div>
 
                         <div class = "off-info">
@@ -203,8 +205,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Duck toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">RS. 133.00</p>
                         </div>
                     </div>
                     <!-- end of single product -->
@@ -236,8 +238,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Pikachoo toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
                     </div>
                     <!-- end of single product -->
@@ -245,7 +247,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/15129300/2021/8/12/06a8a942-609d-455d-86b2-2df3ef17c38e1628777117218SoftToysandDolls1.jpg" alt = "product image">
+                                <img src = "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/15129300/2021/8/12/06a8a942-609d-455d-86b2-2df3ef17c38e1628777117218SoftToysandDolls1.jpg" alt = "product image" height="97%">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -269,8 +271,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Elephant toy, new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
                     </div>
                     <!-- end of single product -->
@@ -302,8 +304,8 @@
                                 </div>
                             </div>
                             <a href = "#" class = "product-name">Robot toy ,new product</a>
-                            <p class = "product-price">$ 150.00</p>
-                            <p class = "product-price">$ 133.00</p>
+                            <p class = "product-price">Rs. 150.00</p>
+                            <p class = "product-price">Rs. 133.00</p>
                         </div>
 
                         <div class = "off-info">
@@ -323,7 +325,6 @@
                         <div class = "product-col-content">
                             <h2 class = "sm-title">Kids toys </h2>
                             <h2 class = "md-title" style="color: aqua;">Kids collection-boys </h2>
-                            <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
                             <button type = "button" class = "btn-dark">Shop now</button>
                         </div>
                     </div>
@@ -334,7 +335,6 @@
                             <div class = "product-col-content">
                                 <h2 class = "sm-title"> </h2>
                                 <h2 class = "md-title" style="color: black;">Kids collection-Girls </h2>
-                                <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
                                 <button type = "button" class = "btn-dark">Shop now</button>
                             </div>
                         </div>
@@ -342,19 +342,17 @@
                         <div class = "product-col-r-bottom">
                             <!-- left -->
                             <div class = "flex">
-                                <div class = "product-col-content">
+                                <div class = "product-col-content" id="flex1">
                                     <h2 class = "sm-title">summer sale </h2>
                                     <h2 class = "md-title">Extra 50% Off </h2>
-                                    <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
                                     <button type = "button" class = "btn-dark">Shop now</button>
                                 </div>
                             </div>
                             <!-- right -->
                             <div class = "flex">
-                                <div class = "product-col-content">
+                                <div class = "product-col-content" id="flex2">
                                     <h2 class = "sm-title">TOYS </h2>
                                     <h2 class = "md-title">best sellers </h2>
-                                    <p class = "text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae consequatur facilis eligendi quibusdam voluptatibus exercitationem autem voluptatum, beatae architecto odit, quisquam repellat. Deleniti, architecto ab.</p>
                                     <button type = "button" class = "btn-dark">Shop now</button>
                                 </div>
                             </div>
@@ -363,6 +361,6 @@
                 </div>
             </div>
         </div>
-        
+
     </body>
 </html>
