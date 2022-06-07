@@ -21,7 +21,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "Toy1.jpg" alt = "product image">
+                                <img src = "Thttps://media.istockphoto.com/photos/brown-teddy-bear-isolated-in-front-of-a-white-background-picture-id909772478?k=20&m=909772478&s=612x612&w=0&h=mzLuJ7ywrSDHmpchf9spOeNF2Ovr2aQBw1z57Szx17g=" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -58,7 +58,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy2.jpg" alt = "product image">
+                                <img src = "https://assets.ajio.com/medias/sys_master/root/h88/h47/14233215565854/-1117Wx1400H-4912802430-multi-MODEL.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -91,7 +91,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy3.jpg" alt = "product image">
+                                <img src = "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1569015224-41nvnQ02C1L.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -124,7 +124,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy4.jpg"alt = "product image">
+                                <img src = "https://5.imimg.com/data5/XQ/KP/MY-40305254/kids-toy-500x500.jpg"alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -161,7 +161,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy5.jpg" alt = "product image">
+                                <img src = "https://3.imimg.com/data3/JM/DV/MY-6255111/tweety-soft-toy-10-inches-250x250.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -194,7 +194,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy6.jpg" alt = "product image">
+                                <img src = "https://jazwaresv2.s3.amazonaws.com/media/POKEMON_PIKACHU_OK.png" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -227,7 +227,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy7.jpg" alt = "product image">
+                                <img src = "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/15129300/2021/8/12/06a8a942-609d-455d-86b2-2df3ef17c38e1628777117218SoftToysandDolls1.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
@@ -260,7 +260,7 @@
                     <div class = "product">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "images/toy8.jpg" alt = "product image">
+                                <img src = "https://www.ibef.org/indian-toys-2021/images/electronic-toys.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
                                 <button type = "button" class = "btn-cart"> add to cart
