@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <style>
+            #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+ #image{
+  width: 100px;
+  height:5rem;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a:active {
+    color: #088178;
+
+}
+
+#navbar li a:active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+:root{
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #40c9a2;
+    --gray: #ededed;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Utility stylings */
+img{
+    width: 100%;
+    display: block;
+    border-radius:15px ;
+}
+.container{
+    width: 88vw;
+    margin: 0 auto;
+}
+.lg-title,
+.md-title,
+.sm-title{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.6rem 0;
+    text-transform: capitalize;
+}
+.lg-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+}
+.md-title{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.sm-title{
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.text-light{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.5;
+    margin: 0.4rem 0;
+}
+
+/* product section */
+.products{
+    background: var(--alice-blue);
+    padding: 3.2rem 0;
+}
+.products .text-light{
+    text-align: center;
+    width: 70%;
+    margin: 0.9rem auto;
+}
+.product{
+    margin: 2rem;
+    position: relative;
+}
+.product-content{
+    background: var(--gray);
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+.product-img{
+    background: var(--white-light);
+    box-shadow: 0 0 20px 10px var(--white-light);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+.product-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+}
+.btn-cart{
+    background: black;
+    color: white;
+}
+.btn-cart:hover{
+    background: var(--carribean-green);
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background: var(--carribean-green);
+    color: #fff;
+}
+.product-info{
+    background: white;
+    padding: 2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    color: var(--carribean-green);
+}
+.product-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product-price{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+.product-price:first-of-type{
+    text-decoration: line-through;
+    color: var(--carribean-green);
+}
+.product-img img{
+    transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+    transform: scale(1.1);
+}
+.product:hover .product-img{
+    background: var(--carribean-green);
+}
+.product:hover .product-btns{
+    opacity: 1;
+}
+.off-info .sm-title{
+    background: var(--carribean-green);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+/* product collection */
+.product-collection{
+    padding: 3.2rem 0;
+}
+.product-collection-wrapper{
+    padding: 3.2rem 0;
+}
+.product-col-left{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("https://c4.wallpaperflare.com/wallpaper/601/590/554/5bd14faf96dc7-wallpaper-preview.jpg") center/cover no-repeat;
+}
+.product-col-r-top{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("data:image/jpeg;base64,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") center/cover no-repeat;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50vh;
+    padding: 2rem 1.5rem 3.2rem;
+    margin: 10px;
+   
+}
+.product-col-r-bottom > div:first-child{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("https://pub-static.fotor.com/assets/projects/pages/6a3e5fa04b2c40ec8caf09ff4b5032ce_thumb.jpg") center/cover no-repeat;;
+}
+.product-col-r-bottom > div:last-child{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("data:image/jpeg;base64,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") center/cover no-repeat;
+}
+.product-col-content{
+    text-align:center;
+    color: white;
+    position: absolute;
+}
+.product-collection .text-light{
+    opacity: 1;
+    font-size: 0.8;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.btn-dark{
+    background: black;
+    color: white;
+    outline: 0;
+    border-radius: 25px;
+    padding: 0.7rem 1rem;
+    border: 0;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.btn-dark:hover{
+    background: var(--carribean-green);
+}
+
+/* Media Queries */
+@media screen and (min-width: 992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .product-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .products .text-light{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1336px){
+    .product-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex{
+        height: 60vh;
+    }
+    .product-col-left{
+        height: 121.5vh;
+    }
+}
+            </style>
+    </head>
+    <body>
+        <section id="header">
+            <a href="#"><img src="https://www.vectorlogo.zone/logos/shopify/shopify-ar21.png" class="logo" width="12px " height="10%" id="image"></a>
+    
+            <div>
+                <ul id="navbar">
+                    <li><a class="active" href="#">Home</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#" class="fa-solid fa-cart-shopping" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg></a></li>
+    
+                </ul>
+            </div>
+        </section>
+
+        <div class = "products">
+            <div class = "container">
+                <h1 class = "lg-title">Branded Clothes With Offers</h1>
+                <p class = "text-light"><b>ALWAYS DRESS WELL, <br>KEEP IT SIMPLE, <br>BUT SIGNIFICANT.</b></p>
+
+                <div class = "product-items">
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRtR7nVg4Im5La9bSs1yJL0AA1m2jX9Efw-g&usqp=CAU" height="100%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Zara Exclusive Shirt, New Product</a>
+                            <p class = "product-price">₹4000</p>
+                            <p class = "product-price">₹2200</p>
+                        </div>
+
+                        <div class = "off-info">
+                            <h2 class = "sm-title">25% off</h2>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNNRIEdtr8bTPKqRYPjcanN-4Z6aRVYlbWgQ&usqp=CAU" height="98%" alt = "product image">
+                               
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Zara Exclusive T-Shirt, New Product</a>
+                            <p class = "product-price">₹2500</p>
+                            <p class = "product-price">₹1500</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF8ypjFPdcRB8C0lTfcYKHZTWYAGnDrzQmIA&usqp=CAU" height="98%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">H&M Exclusive Hoodie, New Product</a>
+                            <p class = "product-price">₹1700</p>
+                            <p class = "product-price">₹999</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5W77DoBkeEy7R7Us5ByMAMcr8XICrUJcQNQ&usqp=CAU"alt = "product image" height="98%">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">U.s. Polo Pant, New Product</a>
+                            <p class = "product-price">₹2900</p>
+                            <p class = "product-price">₹1500</p>
+                        </div>
+
+                        <div class = "off-info">
+                            <h2 class = "sm-title">25% off</h2>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwR5waGXamYkUPxzfFDUHRA5nka2icIWUlew&usqp=CAU" height="98%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Van Heusen Premium Pant, New Product</a>
+                            <p class = "product-price">₹2500</p>
+                            <p class = "product-price">₹1800</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlfdn4bYGHKODbmVAtLdzN--3tRdfVm_f9nAYTxlsOBOcWmE7czInzqHW5ZoI_NJ5fwRM&usqp=CAU" height="98%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Van Heusen Suit, New Product</a>
+                            <p class = "product-price">₹6000</p>
+                            <p class = "product-price">₹3500</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR95NqYS9aATn-EkzwngSXm3jWTS4wsdrLt7w&usqp=CAU" height="98%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Zara Exclusive Kids T-Shirt , New Product</a>
+                            <p class = "product-price">₹2500</p>
+                            <p class = "product-price">₹1200</p>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                    <!-- single product -->
+                    <div class = "product">
+                        <div class = "product-content">
+                            <div class = "product-img">
+                                <img src = "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/14641706/2022/3/2/ee87dc80-e501-4075-82bb-79d6ab5f15e21646222187260-Allen-Solly-Junior-Boys-Maroon-Slim-Fit-Regular-Trousers-609-1.jpg" height="98%" alt = "product image">
+                            </div>
+                            <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title">lifestyle</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">Allen Solly Exclusive Kids Pant ,New Product</a>
+                            <p class = "product-price">₹1800</p>
+                            <p class = "product-price">₹1200</p>
+                        </div>
+
+                        <div class = "off-info">
+                            <h2 class = "sm-title">35% off</h2>
+                        </div>
+                    </div>
+                    <!-- end of single product -->
+                </div>
+            </div>
+        </div>
+
+        <div class = "product-collection">
+            <div class = "container">
+                <div class = "product-collection-wrapper">
+                    <!-- product col left -->
+                    <div class = "product-col-left flex">
+                        <div class = "product-col-content">
+                            <h2 class = "sm-title"> </h2>
+                            <h2 class = "md-title" style="color: aqua;"><b>ALWAYS DRESS WELL, <br>KEEP IT SIMPLE, <br>BUT SIGNIFICANT.</b> </h2>
+                            <button type = "button" class = "btn-dark">Shop now</button>
+                        </div>
+                    </div>
+
+                    <!-- product col right -->
+                    <div class = "product-col-right">
+                        <div class = "product-col-r-top flex">
+                            <div class = "product-col-content">
+                                <h2 class = "sm-title"> </h2>
+                                <h2 class = "md-title" style="color: black;">Kids collections </h2>
+                                <button type = "button" class = "btn-dark">Shop now</button>
+                            </div>
+                        </div>
+
+                        <div class = "product-col-r-bottom">
+                            <!-- left -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title"> </h2>
+                                    <h2 class = "md-title"> </h2>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                            <!-- right -->
+                            <div class = "flex">
+                                <div class = "product-col-content">
+                                    <h2 class = "sm-title">Mens And Kids</h2>
+                                    <h2 class = "md-title">Best Sellers </h2>
+                                    <button type = "button" class = "btn-dark">Shop now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
