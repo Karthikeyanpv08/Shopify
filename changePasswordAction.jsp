@@ -19,7 +19,7 @@ else
         while(rs.next())
         {
             check=1;
-            st.executeupdate("update users set password='"+newPassword+"' where email='"+email+"'");
+            st.executeUpdate("update users set password='"+newPassword+"' where email='"+email+"'");
             response.sendRedirect("changePassword.jsp?msg=done");
         }
         if(check==0)
