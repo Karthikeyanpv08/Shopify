@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="width-device-width, initial-scale-1.0">
+    <title>Coupon Card</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@100&family=Parisienne&family=Quicksand:wght@300&family=Sacramento&family=Source+Serif+4:opsz@8..60&display=swap');
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family:'poppins',sans-serif;
+
+}
+
+.container{
+
+  width: 100%;
+  height:100vh;
+  background: #fff9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.coupon-card{
+  background: linear-gradient(135deg,#7158fe,#9d4de6);
+  color: palegreen;
+  text-align: center;
+  padding: 40px 80px;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 15);
+  position: relative;
+
+}
+.logo{
+
+  width: 80px;
+  border-radius: 8px;
+  margin-bottom:20px;
+
+}
+
+.coupon-card h3{
+    font-size:28px;
+    font-weight: 400;
+    line-height:40px;
+
+}
+.coupon-card p{
+
+  font-size: 15px;
+border: 1px dashed #fff;
+padding: 10px
+}
+
+.coupon-row{
+
+  display: flex;
+  align-items: center;
+  margin: 25px auto;
+  width: fit-content;
+}
+
+#cpnCode{
+  border: 1px dashed #fff;
+  padding: 10px 20px;
+  border-right: 0;
+
+}
+#cpnBtn{
+border: 1px solid #fff;
+background:#fff ;
+padding: 10px 20px;
+color:#7158fe;
+cursor: pointer;
+}
+
+
+
+</style>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="coupon-card">
+        <img src="https://www.vectorlogo.zone/logos/shopify/shopify-ar21.png" alt="" class="logo">
+        <h3>20% flat off on all rides within the city using HDFC credit card</h3>
+        <div class="coupon-row">
+          <span id="cpnCode">SHOPIFY20</span>
+          <span id="cpnBtn">COPY CODE</span>
+          </div>
+
+        <p>valid till: 20 Dec 2021</p>
+        <div class="circle1"></div>
+        <div class="circle1"></div>
+
+      </div>
+    </div>
+
+    <script>
+      var cpnBtn = document.getElementById("cpnBtn");
+      var cpnCode= document.getElementById("cpnCode");
+
+      cpnBtn.onclick=function(){
+        navigator.clipboard.writeText(cpnCode.innerHtml);
+        cpnBtn.innerHTML="COPIED";
+      }
+
+    </script>
+  </body>
+</html>
