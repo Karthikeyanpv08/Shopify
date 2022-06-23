@@ -1,3 +1,6 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%@include file="footer.jsp" %>
 
 <html>
 <head>
@@ -219,44 +222,45 @@ h3
 <title>Bill</title>
 </head>
 <body>
-  <section id="header">
-    <a href="#" class="logo"> <img src="https://www.vectorlogo.zone/logos/shopify/shopify-ar21.png" alt="myLogo" style="width:125px;"></a>        
-    <div>
-        <ul id="navbar">
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Account</a></li>
-            <li><a href="#" class="fa-solid fa-cart-shopping" >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg></a></li>
-
-        </ul>
-    </div>
-</section>
-<br>
+<%
+String email=session.getAttribute("email").toString();
+try
+{
+	int total=0;
+	int sno=0;
+	Connection con=ConnectionProvider.getCon();
+	Statement st=con.createStatement();
+	ResultSet rs=st.executeQuery("select sum(total) from cart where email='"+email+"' and status='bill'");
+	while(rs.next())
+	{
+		total=rs.getInt(1);
+	}
+	ResultSet rs2=st.executeQuery("select *from users inner join cart where cart.email='"+email+"' and cart.status='bill'");
+	while(rs2.next())
+	{
+%>
 <h3> Products Bill </h3>
 <hr>
-<br>
-<div class="left-div"><h3>Name:  </h3><br></div>
-<div class="right-div-right"><h3>Email:  </h3><br></div>
-<div class="right-div"><h3>Mobile Number:  </h3><br></div>  
+<div class="left-div"><h3>Name: <%=rs2.getString(1) %> </h3><br></div>
+<div class="right-div-right"><h3>Email: <%out.println(email); %></h3><br></div>
+<div class="right-div"><h3>Mobile Number: <%=rs2.getString(1) %></h3><br></div>  
 
-<div class="left-div"><h3>Order Date:  </h3><br></div>
-<div class="right-div-right"><h3>Payment Method:  </h3><br></div>
-<div class="right-div"><h3>Expected Delivery:  </h3><br></div>
+<div class="left-div"><h3>Order Date:  <%=rs2.getString(21) %></h3><br></div>
+<div class="right-div-right"><h3>Payment Method:  <%=rs2.getString(23) %></h3><br></div>
+<div class="right-div"><h3>Expected Delivery:  <%=rs2.getString(22) %></h3><br></div>
 
-<div class="left-div"><h3>Transaction Id:  </h3><br></div>
-<div class="right-div-right"><h3>City:  </h3><br></div> 
-<div class="right-div"><h3>Address:  </h3><br></div> 
+<div class="left-div"><h3>Transaction Id:  <%=rs2.getString(24) %></h3><br></div>
+<div class="right-div-right"><h3>City:  <%=rs2.getString(17) %></h3><br></div> 
+<div class="right-div"><h3>Address:  <%=rs2.getString(16) %></h3><br></div> 
 
-<div class="left-div"><h3>State:  </h3><br></div>
-<div class="right-div-right"><h3>Country:  </h3><br></div>  
+<div class="left-div"><h3>State:  <%=rs2.getString(18) %></h3><br></div>
+<div class="right-div-right"><h3>Country:  <%=rs2.getString(19) %></h3><br></div>  
 <hr>
+<%
+break;
+}
+%>
 
-<hr>
 <br>
 <table id="customers">
 <h3> Product Details </h3>
@@ -269,21 +273,36 @@ h3
     <th>Quantity</th>
      <th>Sub Total</th>
   </tr>
-  
+   <% 
+  ResultSet rs1=st.executeQuery("select *from cart inner join product where cart.product_id=product.id and cart.email='"+email+"' and cart.status='bill'");
+  while(rs1.next())
+  {
+	  sno=sno+1;
+  %>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-     <td></td>
+    <td><%out.println(sno); %></td>
+    <td><%=rs1.getString(17) %></td>
+    <td><%=rs1.getString(18) %></td>
+    <td><%=rs1.getString(20) %></td>
+    <td><%=rs1.getString(3) %></td>
+    <td><%=rs1.getString(5) %></td>
   </tr>
+  <tr>
+<%
+} 
+%>
 </table>
 <br><br><br><br>
-<h2>Total: </h2>
-<a href="index.jsp"><button class="button left-button">Continue Shopping</button></a>
+<h2>Total:  <%out.println(total); %> </h2>
+<a href="continueShopping.jsp"><button class="button left-button">Continue Shopping</button></a>
 <a onclick="window.print();"><button class="button right-button">Print</button></a>
 <br><br><br><br>
-
+<%
+}
+catch(Exception e)
+{
+	System.out.println(e);
+}
+%>
 </body>
 </html>
